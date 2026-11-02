@@ -327,6 +327,9 @@ function publish(sub,obj,retain){if(client&&connected)client.publish(T(sub),obj=
 function publishMe(){if(!myState)return;myState.ts=Date.now();if(client&&connected)client.publish(myTopic,JSON.stringify(myState),{qos:0,retain:true})}
 function setMe(patch){myState=Object.assign(myState||{},patch);publishMe()}
 setInterval(publishMe,3000);
+// bağlantı koptuysa ve kendi kendine dönmediyse yeniden bağlan
+setInterval(()=>{try{if(client&&!client.connected&&!client.reconnecting){client.reconnect()}}catch(e){}},5000);
+document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible"){try{if(client&&!client.connected)client.reconnect()}catch(e){}}});
 window.addEventListener("pagehide",()=>{try{client&&myTopic&&client.publish(myTopic,"",{qos:0,retain:true})}catch(e){}});
 const online=d=>d&&Math.abs(Date.now()-(d.ts||0))<ONLINE_MS;
 const scooters=()=>[...devices.values()].filter(d=>d.role==="scooter"&&online(d));
