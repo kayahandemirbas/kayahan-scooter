@@ -287,7 +287,7 @@ window.ksNative=function(d){ /* Toolkit uygulamasından gelen yerel konum/batary
 };
 window.ksNativeErr=m=>{geoErr=m;toast(m,6000)};
 const IN_APP=!!window.__ksNative||!/^https?:/.test(location.protocol);
-function publicUrl(){const h=location.href.split("#")[0];if(location.protocol==="https:")return h;return liveUrl||ls.get("ks_public")||(PUBLIC_URL.startsWith("http")?PUBLIC_URL:"")}
+function publicUrl(){const h=location.href.split("#")[0];if(location.protocol==="https:")return h;return (PUBLIC_URL.startsWith("http")?PUBLIC_URL:"")||liveUrl||ls.get("ks_public")||""}
 let liveUrl="";
 function parseCode(t){t=String(t||"").trim();const m=t.match(/[#&?]u=([A-Za-z0-9-]+)/);if(m)return m[1].toUpperCase();if(/^KS:/i.test(t))return t.slice(3).toUpperCase();return t.toUpperCase()}
 const QR_U=(location.hash.match(/[#&]u=([A-Za-z0-9-]+)/)||[])[1];
@@ -304,7 +304,7 @@ function connect(id){
   let bi=0,failed=0;
   const make=()=>mqtt.connect(BROKERS[bi],{clientId:"ks_"+id+"_"+Math.random().toString(16).slice(2,8),clean:true,keepalive:20,reconnectPeriod:3000,connectTimeout:8000,will:{topic:myTopic,payload:"",qos:1,retain:true}});
   const wire=c=>{
-    c.on("connect",()=>{connected=true;failed=0;c.subscribe([T("d/+"),T("zones"),T("price"),T("cmd"),T("rides"),T("url")],{qos:1});if(/^https:/.test(location.protocol)){const u=location.href.split("#")[0];if(u!==liveUrl)c.publish(T("url"),JSON.stringify({u}),{qos:1,retain:true})}if(myState)publishMe();fire()});
+    c.on("connect",()=>{connected=true;failed=0;c.subscribe([T("d/+"),T("zones"),T("price"),T("cmd"),T("rides"),T("url")],{qos:1});if(/^https:/.test(location.protocol)){const u=location.href.split("#")[0];if(u!==liveUrl&&(!PUBLIC_URL.startsWith("http")||u===PUBLIC_URL))c.publish(T("url"),JSON.stringify({u}),{qos:1,retain:true})}if(myState)publishMe();fire()});
     c.on("close",()=>{connected=false;fire()});
     c.on("error",()=>{});
     c.on("offline",()=>{failed++;connected=false;fire();if(failed>=2&&BROKERS.length>1){failed=0;bi=(bi+1)%BROKERS.length;try{c.end(true)}catch(e){}client=make();wire(client)}});
