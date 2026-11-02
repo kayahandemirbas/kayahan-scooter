@@ -1,0 +1,665 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,maximum-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="K Scooter">
+<meta name="theme-color" content="#0E1622">
+<title>Kayahan Scooter</title>
+<link rel="icon" href="data:image/png;base64,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">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mqtt@5.10.1/dist/mqtt.min.js"></script>
+<style>
+/* Tasarım: gece sürüşü — derin lacivert zemin, scooter sarısı vurgu, harita tam ekran, cam efektli kartlar */
+:root{
+  --bg:#F2F4F8;--surface:rgba(255,255,255,.94);--solid:#FFFFFF;--ink:#0E1622;--muted:#5E6B7D;--line:rgba(14,22,34,.10);
+  --accent:#FFB000;--accent-2:#FF7A00;--accent-ink:#1A1000;--ok:#14A865;--warn:#E08A00;--bad:#E5484D;--blue:#2F7BEA;
+  --shadow:0 10px 30px rgba(14,22,34,.16),0 2px 6px rgba(14,22,34,.08);
+  --f-d:"Bricolage Grotesque",system-ui,sans-serif;--f-b:"Figtree",system-ui,sans-serif;--f-m:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  --r:22px;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#0A111B;--surface:rgba(18,28,42,.92);--solid:#121C2A;--ink:#EEF2F7;--muted:#93A1B4;--line:rgba(238,242,247,.10);
+  --ok:#2FD08A;--warn:#FFB020;--bad:#FF6B6E;--blue:#6BA6FF;--shadow:0 12px 34px rgba(0,0,0,.5),0 2px 8px rgba(0,0,0,.35);color-scheme:dark}}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{margin:0;height:100%}
+body{background:var(--bg);color:var(--ink);font:15px/1.45 var(--f-b);-webkit-tap-highlight-color:transparent;-webkit-font-smoothing:antialiased;overscroll-behavior:none}
+button{font:inherit;color:inherit}
+.mono{font-family:var(--f-m);font-variant-numeric:tabular-nums}
+.muted{color:var(--muted)}
+.note{font-size:13px;color:var(--muted);margin:0;line-height:1.5}
+h1{font:800 30px/1.08 var(--f-d);letter-spacing:-.025em;margin:0;text-wrap:balance}
+h2{font:800 19px/1.2 var(--f-d);letter-spacing:-.01em;margin:0}
+.btn{appearance:none;border:0;border-radius:16px;padding:15px 18px;font:700 16px var(--f-b);cursor:pointer;background:linear-gradient(180deg,var(--accent),var(--accent-2));color:var(--accent-ink);width:100%;text-align:center;display:flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;box-shadow:0 6px 18px rgba(255,140,0,.32);transition:transform .12s}
+.btn:active{transform:scale(.98)}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line);box-shadow:none}
+.btn.dark{background:var(--ink);color:var(--bg);box-shadow:none}
+.btn.danger{background:linear-gradient(180deg,#FF5A5F,#D63A3F);color:#fff;box-shadow:0 6px 18px rgba(229,72,77,.3)}
+.btn.sm{padding:9px 13px;font-size:13px;width:auto;border-radius:12px;box-shadow:none}
+.btn:disabled{opacity:.4;cursor:not-allowed;box-shadow:none}
+.btn svg{width:20px;height:20px;flex:none}
+.btn:focus-visible,input:focus-visible,.iconbtn:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.chip{font-size:12px;font-weight:800;border-radius:99px;padding:4px 10px;white-space:nowrap;letter-spacing:.01em}
+.c-ok{background:color-mix(in srgb,var(--ok) 16%,transparent);color:var(--ok)}
+.c-warn{background:color-mix(in srgb,var(--warn) 18%,transparent);color:var(--warn)}
+.c-bad{background:color-mix(in srgb,var(--bad) 16%,transparent);color:var(--bad)}
+.c-off{background:color-mix(in srgb,var(--muted) 18%,transparent);color:var(--muted)}
+.c-blue{background:color-mix(in srgb,var(--blue) 16%,transparent);color:var(--blue)}
+.row{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.kv{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.kv div{background:color-mix(in srgb,var(--ink) 5%,transparent);border-radius:14px;padding:10px 12px;min-width:0}
+.kv small{display:block;color:var(--muted);font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.kv b{font:700 18px var(--f-m)}
+.alert{border-radius:14px;padding:11px 13px;font-weight:700;font-size:14px;display:flex;gap:10px;align-items:center;border:1px solid color-mix(in srgb,var(--warn) 50%,transparent);background:color-mix(in srgb,var(--warn) 14%,transparent)}
+.alert.bad{border-color:color-mix(in srgb,var(--bad) 50%,transparent);background:color-mix(in srgb,var(--bad) 14%,transparent)}
+.alert::before{content:"!";flex:none;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font:800 13px var(--f-b);background:var(--warn);color:#fff}
+.alert.bad::before{background:var(--bad)}
+.conn{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:800;color:var(--muted);white-space:nowrap;background:var(--surface);border:1px solid var(--line);border-radius:99px;padding:6px 11px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.conn::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--muted)}
+.conn.on{color:var(--ok)}.conn.on::before{background:var(--ok);box-shadow:0 0 0 0 var(--ok);animation:live 1.8s infinite}
+@keyframes live{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--ok) 60%,transparent)}100%{box-shadow:0 0 0 9px transparent}}
+.toast{position:fixed;left:50%;transform:translateX(-50%);top:calc(14px + env(safe-area-inset-top));background:var(--ink);color:var(--bg);padding:12px 18px;border-radius:14px;font-weight:700;z-index:3000;max-width:92vw;text-align:center;box-shadow:var(--shadow);animation:drop .25s ease-out}
+@keyframes drop{from{opacity:0;transform:translate(-50%,-10px)}}
+.iconbtn{appearance:none;border:1px solid var(--line);background:var(--surface);width:42px;height:42px;border-radius:14px;display:grid;place-items:center;cursor:pointer;box-shadow:var(--shadow);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.iconbtn svg{width:20px;height:20px}
+.logo{width:34px;height:34px;border-radius:10px;box-shadow:0 4px 12px rgba(255,140,0,.35)}
+.brand{display:flex;align-items:center;gap:10px;font:800 20px var(--f-d);letter-spacing:-.02em}
+
+/* ---- Karşılama ---- */
+.welcome{min-height:100%;padding:calc(18px + env(safe-area-inset-top)) max(18px,env(safe-area-inset-right)) calc(28px + env(safe-area-inset-bottom)) max(18px,env(safe-area-inset-left));max-width:560px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+.hero{border-radius:28px;padding:22px;color:#fff;background:radial-gradient(120% 90% at 100% 0%,#FF9A1F 0%,#FF6A00 30%,transparent 60%),linear-gradient(160deg,#141F2E,#0A111B);position:relative;overflow:hidden;min-height:190px;display:flex;flex-direction:column;justify-content:flex-end;gap:8px}
+.hero h1{color:#fff;font-size:32px}
+.hero p{margin:0;color:rgba(255,255,255,.78);font-size:14px;max-width:30ch}
+.hero svg.sc{position:absolute;right:-14px;top:-8px;width:130px;height:130px;opacity:.35}
+.roles{display:grid;gap:10px}
+.role{appearance:none;display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;text-align:left;background:var(--solid);border:1px solid var(--line);border-radius:20px;padding:15px;cursor:pointer;box-shadow:0 2px 10px rgba(14,22,34,.05);transition:transform .12s}
+.role:active{transform:scale(.985)}
+.role b{display:block;font:800 17px var(--f-d)}.role span{color:var(--muted);font-size:13px;font-weight:500}
+.role i{width:50px;height:50px;border-radius:16px;display:grid;place-items:center;font-style:normal}
+.role i svg{width:26px;height:26px}
+.role em{font-style:normal;color:var(--muted);font-size:22px}
+.field{display:grid;gap:6px;font-size:13px;font-weight:700;color:var(--muted)}
+input[type=text],input[type=number]{font:600 16px var(--f-b);padding:13px 14px;border-radius:14px;border:1px solid var(--line);background:var(--solid);color:var(--ink);width:100%}
+
+/* ---- Harita ekranı (müşteri) ---- */
+.mapscreen{position:fixed;inset:0}
+.mapscreen .map{position:absolute;inset:0;z-index:0}
+.topbar{position:absolute;z-index:500;top:calc(10px + env(safe-area-inset-top));left:max(12px,env(safe-area-inset-left));right:max(12px,env(safe-area-inset-right));display:flex;align-items:center;justify-content:space-between;gap:10px;pointer-events:none}
+.topbar>*{pointer-events:auto}
+.pillbrand{display:flex;align-items:center;gap:9px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:6px 12px 6px 6px;box-shadow:var(--shadow);font:800 16px var(--f-d);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.pillbrand img{width:30px;height:30px;border-radius:9px}
+.fab{position:absolute;z-index:500;right:max(12px,env(safe-area-inset-right))}
+.sheet{position:absolute;z-index:600;left:0;right:0;bottom:0;margin:0 auto;max-width:560px;background:var(--surface);backdrop-filter:blur(20px) saturate(1.4);-webkit-backdrop-filter:blur(20px) saturate(1.4);border:1px solid var(--line);border-bottom:0;border-radius:28px 28px 0 0;box-shadow:0 -10px 40px rgba(14,22,34,.18);padding:10px max(18px,env(safe-area-inset-right)) calc(18px + env(safe-area-inset-bottom)) max(18px,env(safe-area-inset-left));display:flex;flex-direction:column;gap:14px;max-height:78vh;overflow:auto}
+.sheet::before{content:"";width:40px;height:5px;border-radius:9px;background:color-mix(in srgb,var(--ink) 18%,transparent);align-self:center;flex:none}
+.scrow{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:12px;align-items:center;padding:10px 12px;border-radius:16px;border:1px solid var(--line);background:var(--solid);cursor:pointer;text-align:left;appearance:none;width:100%}
+.scrow .ico{width:42px;height:42px;border-radius:13px;background:color-mix(in srgb,var(--accent) 20%,transparent);display:grid;place-items:center}
+.scrow .ico svg{width:24px;height:24px}
+.scrow b{font:700 15px var(--f-m)}.scrow small{display:block;color:var(--muted);font-size:12.5px}
+.batt{display:inline-flex;align-items:center;gap:6px;font:700 13px var(--f-m)}
+.batt i{width:26px;height:12px;border-radius:3px;border:1.6px solid currentColor;position:relative;padding:1.4px;display:block}
+.batt i::after{content:"";position:absolute;right:-4px;top:2.5px;width:2px;height:4px;border-radius:1px;background:currentColor}
+.batt i span{display:block;height:100%;border-radius:1.5px;background:currentColor}
+.ridehead{display:flex;align-items:flex-end;justify-content:space-between;gap:12px}
+.timer{font:700 54px/0.95 var(--f-m);letter-spacing:-.04em}
+.cost{font:800 28px var(--f-m);letter-spacing:-.02em}
+.photo{border-radius:18px;border:2px dashed var(--line);padding:22px;text-align:center;color:var(--muted);display:grid;gap:8px;place-items:center}
+.photo img{border-radius:12px;max-height:220px;max-width:100%}
+.receipt{background:var(--solid);border-radius:20px;border:1px solid var(--line);padding:4px 16px;position:relative}
+.receipt .it{display:flex;justify-content:space-between;gap:10px;padding:11px 0;border-top:1px dashed var(--line)}
+.receipt .it:first-child{border-top:0}
+.receipt .tot{font-weight:800;font-size:19px;border-top:1.5px solid var(--ink)!important}
+.check{width:64px;height:64px;border-radius:50%;background:var(--ok);display:grid;place-items:center;margin:4px auto 0;box-shadow:0 0 0 10px color-mix(in srgb,var(--ok) 18%,transparent);animation:pop .45s cubic-bezier(.2,1.6,.4,1)}
+.check svg{width:32px;height:32px}
+@keyframes pop{from{transform:scale(.3);opacity:0}}
+
+/* scanner */
+.overlay{position:fixed;inset:0;background:#05080D;z-index:2000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:calc(20px + env(safe-area-inset-top)) 20px calc(20px + env(safe-area-inset-bottom));color:#EEF2F7}
+.cam{position:relative;width:min(86vw,420px);aspect-ratio:1/1;border-radius:28px;overflow:hidden;background:#000}
+.cam video{width:100%;height:100%;object-fit:cover}
+.cam .fr{position:absolute;inset:14%}
+.cam .fr i{position:absolute;width:44px;height:44px;border:4px solid #FFB000}
+.cam .fr i:nth-child(1){left:0;top:0;border-right:0;border-bottom:0;border-radius:16px 0 0 0}
+.cam .fr i:nth-child(2){right:0;top:0;border-left:0;border-bottom:0;border-radius:0 16px 0 0}
+.cam .fr i:nth-child(3){left:0;bottom:0;border-right:0;border-top:0;border-radius:0 0 0 16px}
+.cam .fr i:nth-child(4){right:0;bottom:0;border-left:0;border-top:0;border-radius:0 0 16px 0}
+.cam .laser{position:absolute;left:16%;right:16%;height:2px;background:#FFB000;box-shadow:0 0 16px 2px #FFB000;animation:sweep 1.6s ease-in-out infinite alternate}
+@keyframes sweep{from{top:17%}to{top:83%}}
+.overlay input{background:#121C2A;color:#EEF2F7;border-color:#26354A}
+
+/* markers */
+.pin{position:relative;width:44px;height:52px;filter:drop-shadow(0 4px 6px rgba(0,0,0,.35));transition:transform .2s}
+.pin.sel{transform:scale(1.18)}
+.pin svg{width:44px;height:52px;display:block}
+.pin b{position:absolute;left:0;right:0;top:10px;text-align:center;font:800 11px var(--f-m);color:#1A1000}
+.pin.u b{color:#fff}
+.pin .ring{position:absolute;left:50%;top:22px;width:56px;height:56px;margin:-28px 0 0 -28px;border-radius:50%;border:3px solid var(--bad);animation:pulse 1.2s infinite}
+@keyframes pulse{0%{transform:scale(.6);opacity:1}100%{transform:scale(1.4);opacity:0}}
+.me{width:20px;height:20px;border-radius:50%;background:var(--blue);border:3.5px solid #fff;box-shadow:0 0 0 0 rgba(47,123,234,.5);animation:me 2s infinite}
+@keyframes me{0%{box-shadow:0 0 0 0 rgba(47,123,234,.45)}100%{box-shadow:0 0 0 18px rgba(47,123,234,0)}}
+.cust{width:14px;height:14px;border-radius:50%;background:var(--blue);border:3px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.3)}
+.leaflet-container{font-family:var(--f-b);background:var(--bg)}
+.leaflet-control-attribution{font-size:9px!important;background:color-mix(in srgb,var(--solid) 70%,transparent)!important}
+.leaflet-control-zoom{display:none}
+
+/* ---- Scooter ekranı ---- */
+.sc-screen{min-height:100%;padding:calc(12px + env(safe-area-inset-top)) max(16px,env(safe-area-inset-right)) calc(26px + env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left));max-width:560px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+.lockstage{border-radius:30px;padding:26px 18px 22px;display:grid;justify-items:center;gap:12px;color:#fff;transition:background .5s;position:relative;overflow:hidden}
+.lockstage.locked{background:radial-gradient(90% 70% at 50% 0%,#3A1418,#170A0D 70%)}
+.lockstage.unlocked{background:radial-gradient(90% 70% at 50% 0%,#0F4D33,#06170F 70%)}
+.lockring{width:150px;height:150px;border-radius:50%;display:grid;place-items:center;position:relative}
+.lockring::before,.lockring::after{content:"";position:absolute;inset:0;border-radius:50%;border:3px solid currentColor;opacity:.5;animation:ripple 2.4s infinite}
+.lockring::after{animation-delay:1.2s}
+@keyframes ripple{0%{transform:scale(.75);opacity:.7}100%{transform:scale(1.25);opacity:0}}
+.lockring .core{width:110px;height:110px;border-radius:50%;display:grid;place-items:center;background:currentColor}
+.lockring .core svg{width:52px;height:52px;color:#fff}
+.locked .lockring{color:#E5484D}.unlocked .lockring{color:#14A865}
+.lockstage .s1{font:800 34px var(--f-d);letter-spacing:.02em}
+.lockstage .s2{font-size:14px;opacity:.85}
+.card{background:var(--solid);border:1px solid var(--line);border-radius:var(--r);padding:16px;display:flex;flex-direction:column;gap:12px}
+.qrbox{display:grid;place-items:center;background:#fff;border-radius:18px;padding:16px}
+.qrbox img,.qrbox canvas{max-width:100%;image-rendering:pixelated}
+.qrtag{font:800 15px var(--f-m);color:#0E1622;margin-top:8px;text-align:center;letter-spacing:.06em}
+
+/* ---- Panel ---- */
+.panel{padding:calc(12px + env(safe-area-inset-top)) max(16px,env(safe-area-inset-right)) calc(28px + env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left));max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.stat{background:var(--solid);border:1px solid var(--line);border-radius:18px;padding:14px;display:grid;gap:2px;position:relative;overflow:hidden}
+.stat b{font:700 28px var(--f-m);letter-spacing:-.03em}.stat small{color:var(--muted);font-size:12px;font-weight:700}
+.stat::after{content:"";position:absolute;right:-18px;top:-18px;width:64px;height:64px;border-radius:50%;background:var(--tint,var(--accent));opacity:.14}
+.pmap{height:52vh;min-height:320px;border-radius:22px;overflow:hidden;border:1px solid var(--line)}
+.pgrid{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:14px;align-items:start}
+.list{display:flex;flex-direction:column}
+.it2{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:center;padding:11px 0;border-top:1px solid var(--line)}
+.it2:first-child{border-top:0}
+.it2 .t{font-weight:800}.it2 .s{font-size:13px;color:var(--muted)}
+.tools{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.tools .on{outline:3px solid var(--ink);outline-offset:1px}
+@media (max-width:900px){.pgrid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}}
+
+/* ---- TV ---- */
+.tv{position:fixed;inset:0;display:grid;grid-template-columns:minmax(0,1fr) 30vw;grid-template-rows:auto minmax(0,1fr);gap:1.4vw;padding:1.6vw;background:radial-gradient(80% 60% at 100% 0%,rgba(255,122,0,.18),transparent 60%),#070C14;color:#EEF2F7;font-size:1.05vw}
+.tv header{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between}
+.tv .brand{font-size:2.1vw;gap:1vw}.tv .brand img{width:3.2vw;height:3.2vw;border-radius:.9vw}
+.tv .clock{font:700 2.4vw var(--f-m);letter-spacing:-.02em}
+.tv .tmap{border-radius:1.6vw;overflow:hidden;border:1px solid rgba(255,255,255,.08)}
+.tv aside{display:flex;flex-direction:column;gap:1vw;min-height:0}
+.tv .tstats{display:grid;grid-template-columns:1fr 1fr;gap:.8vw}
+.tv .tstat{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:1.2vw;padding:1vw 1.1vw}
+.tv .tstat small{display:block;color:#93A1B4;font-weight:700;font-size:.85vw;text-transform:uppercase;letter-spacing:.08em}
+.tv .tstat b{font:700 2.6vw var(--f-m);letter-spacing:-.03em}
+.tv .tbox{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:1.2vw;padding:1vw 1.1vw;display:flex;flex-direction:column;gap:.6vw;min-height:0}
+.tv .tbox h2{font-size:1.25vw;color:#EEF2F7}
+.tv .trow{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.8vw;align-items:center;padding:.55vw 0;border-top:1px solid rgba(255,255,255,.07)}
+.tv .trow:first-of-type{border-top:0}
+.tv .trow b{font:700 1.1vw var(--f-m)}.tv .trow small{display:block;color:#93A1B4;font-size:.85vw}
+.tv .grow{flex:1;overflow:hidden}
+.tv .join{display:grid;grid-template-columns:auto 1fr;gap:1vw;align-items:center}
+.tv .join .qrbox{padding:.6vw;border-radius:.8vw}
+.tv .chip{font-size:.8vw;padding:.25vw .7vw}
+.tv .ticker{color:#FFB000;font-weight:800}
+@media (orientation:portrait),(max-width:900px){
+  .tv{position:static;min-height:100%;display:flex;flex-direction:column;gap:12px;padding:calc(12px + env(safe-area-inset-top)) max(14px,env(safe-area-inset-right)) calc(20px + env(safe-area-inset-bottom)) max(14px,env(safe-area-inset-left));font-size:15px}
+  .tv .brand{font-size:20px;gap:8px}.tv .brand img{width:32px;height:32px;border-radius:9px}.tv .brand .ticker{font-size:12px!important}
+  .tv .clock{font-size:22px}.tv .tmap{height:52vh;border-radius:18px}
+  .tv .tstat small{font-size:11px}.tv .tstat b{font-size:26px}.tv .tstat,.tv .tbox{border-radius:16px;padding:12px 14px}
+  .tv .tbox h2{font-size:17px}.tv .trow b{font-size:15px}.tv .trow small{font-size:12.5px}.tv .trow{padding:8px 0;gap:10px}
+  .tv .tbox p{font-size:13px!important}.tv .chip{font-size:12px;padding:3px 9px}.tv .grow{flex:none}.tv .ticker{display:none}.tv .clock{font-size:18px}.tv header .tools{flex-wrap:nowrap}}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<div class="toast" id="toast" hidden></div>
+<div class="overlay" id="scan" hidden>
+  <div style="font:800 20px var(--f-d)">QR kodu çerçeveye getir</div>
+  <div class="cam"><video id="vid" playsinline muted></video><div class="fr"><i></i><i></i><i></i><i></i></div><div class="laser"></div></div>
+  <div id="scanMsg" style="min-height:20px;color:#93A1B4;text-align:center;font-size:14px"></div>
+  <div style="display:flex;gap:8px;width:min(86vw,420px)"><input type="text" id="manual" placeholder="ya da kodu yaz: KS-1234" style="flex:1;min-width:0" autocapitalize="characters"><button class="btn sm" id="manGo">Aç</button></div>
+  <button class="btn ghost" id="scanClose" style="color:#EEF2F7;border-color:#26354A;max-width:420px">Vazgeç</button>
+</div>
+<script>
+/* ===== Ayarlar ===== */
+const ROOM="ks-iefta2vj4qto";
+const BROKERS=["wss://broker.emqx.io:8084/mqtt","wss://broker.hivemq.com:8884/mqtt"];
+const ONLINE_MS=15000;
+const ICON="data:image/png;base64,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";
+const PUBLIC_URL="https://kayahandemirbas.github.io/kayahan-scooter/";   // herkese açık link (GitHub)
+
+const $=s=>document.querySelector(s);
+const app=$("#app");
+const ls={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}},del(k){try{localStorage.removeItem(k)}catch(e){}}};
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const tl=n=>Number(n||0).toLocaleString("tr-TR",{minimumFractionDigits:2,maximumFractionDigits:2})+" ₺";
+const mmss=s=>String(Math.floor(s/60)).padStart(2,"0")+":"+String(Math.floor(s%60)).padStart(2,"0");
+const rnd=()=>String(Math.floor(1000+Math.random()*9000));
+function toast(t,ms=3200){const e=$("#toast");e.textContent=t;e.hidden=false;clearTimeout(toast.t);toast.t=setTimeout(()=>e.hidden=true,ms)}
+function hav(a,b,c,d){const R=6371000,p1=a*Math.PI/180,p2=c*Math.PI/180,dp=p2-p1,dl=(d-b)*Math.PI/180;const x=Math.sin(dp/2)**2+Math.cos(p1)*Math.cos(p2)*Math.sin(dl/2)**2;return 2*R*Math.asin(Math.sqrt(x))}
+const distTxt=m=>m<1000?Math.round(m)+" m":(m/1000).toFixed(1)+" km";
+const battCol=b=>b==null?"var(--muted)":b<20?"var(--bad)":b<45?"var(--warn)":"var(--ok)";
+const battHtml=b=>`<span class="batt" style="color:${battCol(b)}"><i><span style="width:${Math.max(4,Math.min(100,b??0))}%"></span></i>%${b??"?"}</span>`;
+
+/* ikonlar */
+const IC={
+  scooter:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="17.5" r="2.5"/><circle cx="18.5" cy="17.5" r="2.5"/><path d="M8 17.5h8M15.5 4.5l2.6 12.4M13 4.5h4.6"/></svg>',
+  user:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>',
+  panel:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="7" height="9" rx="2"/><rect x="14" y="3" width="7" height="5" rx="2"/><rect x="14" y="12" width="7" height="9" rx="2"/><rect x="3" y="16" width="7" height="5" rx="2"/></svg>',
+  tv:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="2.5" y="4" width="19" height="13" rx="2.5"/><path d="M8 21h8"/></svg>',
+  qr:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M20 16v3a1 1 0 0 1-1 1h-3M8 20H5a1 1 0 0 1-1-1v-3"/><path d="M9 9h2v2H9zM13 13h2v2h-2zM13 9h2M9 13v2"/></svg>',
+  loc:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/><circle cx="12" cy="12" r="7"/></svg>',
+  menu:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>',
+  lock:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><rect x="5" y="10.5" width="14" height="10" rx="2.5"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg>',
+  unlock:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><rect x="5" y="10.5" width="14" height="10" rx="2.5"/><path d="M8 10.5V7.5a4 4 0 0 1 7.6-1.7"/></svg>',
+  check:'<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>',
+  cam:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>',
+};
+
+/* ===== ses / titreşim / ekran ===== */
+let actx=null;
+function unlockAudio(){try{actx=actx||new (window.AudioContext||window.webkitAudioContext)();actx.resume()}catch(e){}}
+function beep(fs){if(!actx)return;let t=actx.currentTime;fs.forEach(f=>{const o=actx.createOscillator(),g=actx.createGain();o.type="sine";o.frequency.value=f;o.connect(g);g.connect(actx.destination);g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.35,t+.02);g.gain.exponentialRampToValueAtTime(.0001,t+.22);o.start(t);o.stop(t+.24);t+=.24})}
+function say(text){try{if(window.webkit&&webkit.messageHandlers&&webkit.messageHandlers.ksSay){webkit.messageHandlers.ksSay.postMessage(text);return}const u=new SpeechSynthesisUtterance(text);u.lang="tr-TR";const vs=speechSynthesis.getVoices().filter(v=>/^tr/i.test(v.lang));const v=vs.find(v=>/siri/i.test(v.name))||vs.find(v=>/enhanced|premium|geliştirilmiş/i.test(v.name))||vs[0];if(v)u.voice=v;speechSynthesis.cancel();speechSynthesis.speak(u)}catch(e){}}
+function buzz(p){try{navigator.vibrate&&navigator.vibrate(p)}catch(e){}}
+async function keepAwake(){try{if("wakeLock" in navigator)await navigator.wakeLock.request("screen")}catch(e){}}
+document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible"&&role&&role!=="panel")keepAwake()});
+
+/* ===== konum / batarya ===== */
+let pos=null,geoErr="",bat=null;
+function startGeo(){
+  if(window.__ksNative)return;
+  if(!navigator.geolocation){geoErr="Bu cihazda konum yok.";return}
+  navigator.geolocation.watchPosition(p=>{pos={lat:+p.coords.latitude.toFixed(6),lng:+p.coords.longitude.toFixed(6),acc:Math.round(p.coords.accuracy),speed:p.coords.speed==null?null:Math.round(p.coords.speed*3.6)};geoErr=""},
+    e=>{geoErr=e.code===1?"Konum izni verilmedi. Ayarlar'dan tarayıcıya konum izni ver.":"Konum alınamıyor, açık alana çık."},
+    {enableHighAccuracy:true,maximumAge:1500,timeout:20000});
+}
+try{navigator.getBattery&&navigator.getBattery().then(b=>{bat=Math.round(b.level*100);b.addEventListener("levelchange",()=>bat=Math.round(b.level*100))}).catch(()=>{})}catch(e){}
+window.ksNative=function(d){ /* Toolkit uygulamasından gelen yerel konum/batarya */
+  if(d&&typeof d.lat==="number")pos={lat:+d.lat.toFixed(6),lng:+d.lng.toFixed(6),acc:Math.round(d.acc||10),speed:d.speed==null?null:Math.round(d.speed)};
+  if(d&&typeof d.bat==="number")bat=Math.round(d.bat);
+  if(d&&typeof d.lat==="number")geoErr="";
+};
+window.ksNativeErr=m=>{geoErr=m;toast(m,6000)};
+const IN_APP=!!window.__ksNative||!/^https?:/.test(location.protocol);
+function publicUrl(){const h=location.href.split("#")[0];if(location.protocol==="https:")return h;return liveUrl||ls.get("ks_public")||(PUBLIC_URL.startsWith("http")?PUBLIC_URL:"")}
+let liveUrl="";
+function parseCode(t){t=String(t||"").trim();const m=t.match(/[#&?]u=([A-Za-z0-9-]+)/);if(m)return m[1].toUpperCase();if(/^KS:/i.test(t))return t.slice(3).toUpperCase();return t.toUpperCase()}
+const QR_U=(location.hash.match(/[#&]u=([A-Za-z0-9-]+)/)||[])[1];
+
+/* ===== canlı bağlantı ===== */
+let client=null,connected=false,myTopic=null,myState=null;
+const devices=new Map();
+let zones=[],price={open:10,min:4};
+const handlers=new Set(),cmdHandlers=new Set(),rideHandlers=new Set(),urlHandlers=new Set();
+const T=s=>ROOM+"/"+s;
+function connect(id){
+  if(!window.mqtt)return;
+  myTopic=T("d/"+id);
+  let bi=0,failed=0;
+  const make=()=>mqtt.connect(BROKERS[bi],{clientId:"ks_"+id+"_"+Math.random().toString(16).slice(2,8),clean:true,keepalive:20,reconnectPeriod:3000,connectTimeout:8000,will:{topic:myTopic,payload:"",qos:1,retain:true}});
+  const wire=c=>{
+    c.on("connect",()=>{connected=true;failed=0;c.subscribe([T("d/+"),T("zones"),T("price"),T("cmd"),T("rides"),T("url")],{qos:1});if(/^https:/.test(location.protocol)){const u=location.href.split("#")[0];if(u!==liveUrl)c.publish(T("url"),JSON.stringify({u}),{qos:1,retain:true})}if(myState)publishMe();fire()});
+    c.on("close",()=>{connected=false;fire()});
+    c.on("error",()=>{});
+    c.on("offline",()=>{failed++;connected=false;fire();if(failed>=2&&BROKERS.length>1){failed=0;bi=(bi+1)%BROKERS.length;try{c.end(true)}catch(e){}client=make();wire(client)}});
+    c.on("message",(topic,buf)=>{
+      const txt=buf.toString();let d=null;try{d=txt?JSON.parse(txt):null}catch(e){return}
+      const sub=topic.slice(ROOM.length+1);
+      if(sub.startsWith("d/")){const did=sub.slice(2);if(!d)devices.delete(did);else devices.set(did,d)}
+      else if(sub==="zones")zones=Array.isArray(d)?d:[];
+      else if(sub==="price"&&d&&typeof d.open==="number")price=d;
+      else if(sub==="cmd"&&d)cmdHandlers.forEach(f=>f(d));
+      else if(sub==="rides"&&d)rideHandlers.forEach(f=>f(d));
+      else if(sub==="url"&&d&&typeof d.u==="string"&&/^https:\/\//.test(d.u)&&d.u!==liveUrl){liveUrl=d.u;urlHandlers.forEach(f=>f())}
+      fire();
+    });
+  };
+  client=make();wire(client);
+}
+function fire(){handlers.forEach(f=>{try{f()}catch(e){console.error(e)}})}
+function publish(sub,obj,retain){if(client&&connected)client.publish(T(sub),obj==null?"":JSON.stringify(obj),{qos:1,retain:!!retain})}
+function publishMe(){if(!myState)return;myState.ts=Date.now();if(client&&connected)client.publish(myTopic,JSON.stringify(myState),{qos:0,retain:true})}
+function setMe(patch){myState=Object.assign(myState||{},patch);publishMe()}
+setInterval(publishMe,3000);
+window.addEventListener("pagehide",()=>{try{client&&myTopic&&client.publish(myTopic,"",{qos:0,retain:true})}catch(e){}});
+const online=d=>d&&Math.abs(Date.now()-(d.ts||0))<ONLINE_MS;
+const scooters=()=>[...devices.values()].filter(d=>d.role==="scooter"&&online(d));
+const customers=()=>[...devices.values()].filter(d=>d.role==="musteri"&&online(d));
+function riderOf(sid){const rs=customers().filter(c=>c.ride&&c.ride.sid===sid).sort((a,b)=>a.ride.start-b.ride.start||(a.id<b.id?-1:1));return rs[0]||null}
+function zoneOf(lat,lng){if(lat==null)return null;let z=null;for(const Z of zones){if(hav(lat,lng,Z.lat,Z.lng)<=Z.r){if(Z.type==="ban")return "ban";z="slow"}}return z}
+const connPill=()=>`<span class="conn ${connected?"on":""}" data-conn>${connected?"Canlı":"Bağlanıyor"}</span>`;
+handlers.add(()=>document.querySelectorAll("[data-conn]").forEach(e=>{e.className="conn "+(connected?"on":"");e.textContent=connected?"Canlı":"Bağlanıyor"}));
+
+/* ===== harita ===== */
+const dark=()=>matchMedia("(prefers-color-scheme: dark)").matches;
+function makeMap(el,forceDark){
+  const m=L.map(el,{zoomControl:false,attributionControl:true}).setView([40.7656,29.9408],15);
+  const isDark=forceDark||dark(),E="https://server.arcgisonline.com/ArcGIS/rest/services/";
+  // Anahtar gerektirmeyen harita (Esri); yüklenmezse OpenStreetMap'e geçer
+  const base=isDark?L.tileLayer(E+"Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}",{maxZoom:20,maxNativeZoom:16,attribution:"© Esri, OpenStreetMap"})
+                   :L.tileLayer(E+"World_Street_Map/MapServer/tile/{z}/{y}/{x}",{maxZoom:20,maxNativeZoom:19,attribution:"© Esri, OpenStreetMap"});
+  base.addTo(m);
+  if(isDark)L.tileLayer(E+"Canvas/World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}",{maxZoom:20,maxNativeZoom:16}).addTo(m);
+  let errs=0,swapped=false;
+  base.on("tileerror",()=>{if(swapped||++errs<4)return;swapped=true;m.eachLayer(l=>{if(l instanceof L.TileLayer)m.removeLayer(l)});
+    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:19,attribution:"© OpenStreetMap"}).addTo(m)});
+  return m;
+}
+function pinIcon(d,sel){
+  const used=!!riderOf(d.id),ban=used&&zoneOf(d.lat,d.lng)==="ban";
+  const fill=used?"#14A865":"#FFB000";
+  return L.divIcon({className:"",iconSize:[44,52],iconAnchor:[22,48],html:`<div class="pin ${used?"u":""} ${sel?"sel":""}">${ban?'<span class="ring"></span>':""}<svg viewBox="0 0 44 52"><path d="M22 51c-1.2 0-2-.8-3-2.2L10 36A18 18 0 1 1 34 36l-9 12.8c-1 1.4-1.8 2.2-3 2.2z" fill="${fill}" stroke="#fff" stroke-width="2.5"/><circle cx="22" cy="20" r="12.5" fill="rgba(255,255,255,.28)"/></svg><b>${d.bat??"?"}</b></div>`});
+}
+const meIcon=()=>L.divIcon({className:"",html:'<div class="me"></div>',iconSize:[20,20],iconAnchor:[10,10]});
+const custIcon=()=>L.divIcon({className:"",html:'<div class="cust"></div>',iconSize:[14,14],iconAnchor:[7,7]});
+function drawZones(layer,onClick){layer.clearLayers();zones.forEach(z=>{const c=L.circle([z.lat,z.lng],{radius:z.r,color:z.type==="ban"?"#E5484D":"#E08A00",weight:2,dashArray:"7 6",fillOpacity:.16});if(onClick)c.on("click",ev=>{L.DomEvent.stopPropagation(ev);onClick(z)});c.addTo(layer)})}
+
+/* ===== rol ===== */
+const ROLES=["scooter","musteri","panel","tv"];
+let role=QR_U?"musteri":(location.hash.slice(1).match(/^[a-z]+/)||[""])[0];
+const ON_TV=location.host==="127.0.0.1:8765"&&/\/tk\//.test(location.pathname); // Kayahan TV Stüdyo içinde
+if(!ROLES.includes(role))role=ls.get("ks_role")||(ON_TV?"tv":"");
+function chooseScreen(){
+  app.innerHTML=`<div class="welcome">
+  <div class="row"><div class="brand"><img class="logo" src="${ICON}" alt="">Kayahan Scooter</div><span class="chip c-off">Test sürümü</span></div>
+  <div class="hero"><svg class="sc" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity=".9"><circle cx="5.5" cy="17.5" r="2.5"/><circle cx="18.5" cy="17.5" r="2.5"/><path d="M8 17.5h8M15.5 4.5l2.6 12.4M13 4.5h4.6"/></svg>
+  <h1>Şehri<br>scooterla gez.</h1><p>Bu telefonun rolünü seç. Linki açan herkes aynı canlı sisteme bağlanır.</p></div>
+  <label class="field">Adın<input type="text" id="nm" maxlength="24" value="${esc(ls.get("ks_name")||"")}" placeholder="Örn. Kayahan"></label>
+  <div class="roles">
+    <button class="role" data-r="musteri"><i style="background:color-mix(in srgb,var(--blue) 16%,transparent);color:var(--blue)">${IC.user}</i><div><b>Müşteri</b><span>Haritada scooter bul, QR okut, sür, öde</span></div><em>›</em></button>
+    <button class="role" data-r="scooter"><i style="background:color-mix(in srgb,var(--accent) 22%,transparent);color:var(--accent-2)">${IC.scooter}</i><div><b>Scooter</b><span>Telefon scooter olur: konum gönderir, kilit QR'ı gösterir</span></div><em>›</em></button>
+    <button class="role" data-r="panel"><i style="background:color-mix(in srgb,var(--ink) 10%,transparent);color:var(--ink)">${IC.panel}</i><div><b>Yönetim paneli</b><span>Filoyu canlı izle, bölge çiz, fiyat ayarla</span></div><em>›</em></button>
+    <button class="role" data-r="tv"><i style="background:color-mix(in srgb,var(--ok) 16%,transparent);color:var(--ok)">${IC.tv}</i><div><b>TV ekranı</b><span>Büyük ekranda canlı filo panosu</span></div><em>›</em></button>
+  </div>
+  <p class="note">Konum ve kamera izni sorulunca <b>İzin ver</b> de.${IN_APP?"":" Safari'de Paylaş → <b>Ana Ekrana Ekle</b> ile uygulama gibi kullanabilirsin."}</p></div>`;
+  app.querySelectorAll("[data-r]").forEach(b=>b.addEventListener("click",()=>{ls.set("ks_name",$("#nm").value.trim());unlockAudio();role=b.dataset.r;ls.set("ks_role",role);history.replaceState(null,"","#"+role);start()}));
+}
+function switchRole(){ls.del("ks_role");try{client&&myTopic&&client.publish(myTopic,"",{qos:1,retain:true})}catch(e){}history.replaceState(null,"",location.pathname+location.search);setTimeout(()=>location.reload(),250)}
+
+/* =========================================================
+   SCOOTER
+   ========================================================= */
+function scooterMode(){
+  let id=ls.get("ks_sid");if(!id){id="KS-"+rnd();ls.set("ks_sid",id)}
+  myState={id,role:"scooter",name:id,bat:bat??100};connect(id);
+  app.innerHTML=`<div class="sc-screen">
+  <div class="row"><div class="brand"><img class="logo" src="${ICON}" alt="">Scooter</div><div class="tools">${connPill()}<button class="iconbtn" id="sw" aria-label="Rol değiştir">${IC.menu}</button></div></div>
+  <div class="lockstage locked" id="st"><div class="lockring"><div class="core" id="lk">${IC.lock}</div></div><div class="s1" id="s1">KİLİTLİ</div><div class="s2" id="s2">Müşteri bekleniyor</div></div>
+  <div id="zA"></div>
+  <div class="card"><div class="row"><h2 class="mono">${id}</h2><span class="chip c-off" id="peers"></span></div>
+    <div class="kv"><div><small>Batarya</small><b id="kB">–</b></div><div><small>GPS</small><b id="kA">–</b></div><div><small>Hız</small><b id="kS">–</b></div></div>
+    <div class="kv" id="rk" hidden><div><small>Süre</small><b id="kT"></b></div><div><small>Mesafe</small><b id="kD"></b></div><div><small>Sürücü</small><b id="kR" style="font-size:14px"></b></div></div>
+    <p class="note" id="geo"></p></div>
+  <div class="card"><div class="row"><h2>Kilit QR kodu</h2><span class="chip c-blue">Okutunca açılır</span></div><div class="qrbox"><div id="qr"></div><div class="qrtag">${id}</div></div><p class="note">Herhangi bir telefon kamerasıyla okutunca uygulama açılır ve kilit açılır. Ekran açık kalmalı, kilitlenirse konum gönderimi durur.</p><a class="btn ghost" id="waLink" target="_blank" rel="noopener" hidden>WhatsApp'tan kilit linki gönder</a></div>
+  </div>`;
+  $("#sw").onclick=switchRole;
+  function drawQr(){const pu=publicUrl();$("#qr").innerHTML="";new QRCode($("#qr"),{text:pu?pu+"#u="+id:"KS:"+id,width:220,height:220,correctLevel:QRCode.CorrectLevel.M});const w=$("#waLink");if(w){w.hidden=!pu;if(pu)w.href="https://wa.me/?text="+encodeURIComponent("Kayahan Scooter "+id+" — dokun, kilidi aç: "+pu+"#u="+id)}}
+  drawQr();urlHandlers.add(drawQr);
+  startGeo();keepAwake();
+  let lastKey=null,lastZone=null,dist=0,prev=null;
+  function draw(){
+    const r=riderOf(id),un=!!r,key=r?r.id+":"+r.ride.start:null;
+    if(key!==lastKey){
+      if(un){beep([660,880,1180]);buzz([150,80,150]);say("Kilit açıldı. İyi sürüşler.");dist=0;prev=pos}
+      else if(lastKey){beep([880,660]);buzz(300);say("Sürüş bitti. Scooter kilitlendi.")}
+      lastKey=key;
+    }
+    const z=pos?zoneOf(pos.lat,pos.lng):null;
+    if(un&&z!==lastZone&&z){if(z==="ban"){beep([420,420,420]);buzz([300,100,300]);say("Dikkat. Sürüş yasak bölgedesin.")}else{beep([720]);buzz(200);say("Yavaş bölge. Hız on beş kilometreye düşürüldü.")}}
+    lastZone=z;
+    $("#st").className="lockstage "+(un?"unlocked":"locked");$("#lk").innerHTML=un?IC.unlock:IC.lock;
+    $("#s1").textContent=un?"KİLİT AÇIK":"KİLİTLİ";$("#s2").textContent=un?"Sürüşte · "+(r.name||"müşteri"):"Müşteri bekleniyor";
+    $("#rk").hidden=!un;if(un){$("#kT").textContent=mmss((Date.now()-r.ride.start)/1000);$("#kD").textContent=(dist/1000).toFixed(2)+" km";$("#kR").textContent=r.name||"–"}
+    $("#zA").innerHTML=un&&z==="ban"?'<div class="alert bad">Sürüş yasak bölge. Gerçek scooter burada durdurulur.</div>':un&&z==="slow"?'<div class="alert">Yavaş bölge. Gerçek scooterda hız 15 km/s ile sınırlanır.</div>':"";
+    $("#kB").textContent="%"+(bat??100);$("#kA").textContent=pos?"±"+pos.acc+"m":"–";$("#kS").textContent=pos&&pos.speed!=null?pos.speed:"–";
+    $("#geo").textContent=geoErr||(pos?"Konum canlı gönderiliyor.":"Konum bekleniyor…");
+    const n=[...devices.values()].filter(d=>d.id!==id&&online(d)).length;$("#peers").textContent=n+" cihaz bağlı";$("#peers").className="chip "+(n?"c-blue":"c-off");
+  }
+  setInterval(()=>{if(pos){if(prev&&lastKey){const s=hav(prev.lat,prev.lng,pos.lat,pos.lng);if(s<250&&pos.acc<80)dist+=s}prev=pos}setMe(Object.assign({bat:bat??100},pos||{}))},2000);
+  handlers.add(draw);draw();setInterval(draw,1000);
+}
+
+/* =========================================================
+   MÜŞTERİ
+   ========================================================= */
+function customerMode(){
+  let id=ls.get("ks_mid");if(!id){id="M-"+rnd();ls.set("ks_mid",id)}
+  const name=ls.get("ks_name")||id;
+  let ride=null;try{ride=JSON.parse(ls.get("ks_ride")||"null")}catch(e){}
+  myState={id,role:"musteri",name,ride};connect(id);
+  let phase=ride?"ride":"browse",sel=null,photo=null,receipt=null,centered=false,follow=true;
+  let track=[];try{track=ride?JSON.parse(ls.get("ks_track")||"[]"):[]}catch(e){}
+  let dist=+(ls.get("ks_dist")||0);
+  app.innerHTML=`<div class="mapscreen"><div id="mapEl" class="map"></div>
+  <div class="topbar"><div class="pillbrand"><img src="${ICON}" alt="">Kayahan</div><div class="tools">${connPill()}<button class="iconbtn" id="sw" aria-label="Rol değiştir">${IC.menu}</button></div></div>
+  <button class="iconbtn fab" id="locate" aria-label="Konumuma git">${IC.loc}</button>
+  <div class="sheet" id="sheet"></div></div>
+  <input type="file" id="ph" accept="image/*" capture="environment" hidden>`;
+  $("#sw").onclick=switchRole;
+  const map=makeMap($("#mapEl")),zl=L.layerGroup().addTo(map),sl=L.layerGroup().addTo(map),trl=L.layerGroup().addTo(map);let meMk=null;
+  map.on("dragstart",()=>follow=false);
+  $("#locate").onclick=()=>{follow=true;if(pos)map.flyTo([pos.lat,pos.lng],17,{duration:.6});else toast(geoErr||"Konum bekleniyor…")};
+  const placeFab=()=>{const h=$("#sheet").offsetHeight;$("#locate").style.bottom=(h+12)+"px"};
+  new ResizeObserver(placeFab).observe($("#sheet"));
+  startGeo();keepAwake();
+
+  /* QR okuyucu */
+  let stream=null,scanning=false;const cv=document.createElement("canvas"),cx=cv.getContext("2d",{willReadFrequently:true});
+  window.ksScanned=code=>unlock(parseCode(code)); // Toolkit'in yerel QR okuyucusu
+  async function openScan(){
+    if(window.webkit&&webkit.messageHandlers&&webkit.messageHandlers.ksScan){webkit.messageHandlers.ksScan.postMessage("open");return}
+    $("#scan").hidden=false;$("#scanMsg").textContent="Kamera açılıyor…";$("#manual").value="";
+    try{stream=await navigator.mediaDevices.getUserMedia({video:{facingMode:"environment"},audio:false});const v=$("#vid");v.srcObject=stream;await v.play();scanning=true;$("#scanMsg").textContent="Scooter üzerindeki kodu okut";loop()}
+    catch(e){$("#scanMsg").textContent="Kamera açılamadı. Kamera iznini kontrol et ya da kodu elle gir."}
+  }
+  function closeScan(){scanning=false;$("#scan").hidden=true;if(stream){stream.getTracks().forEach(t=>t.stop());stream=null}}
+  function loop(){if(!scanning)return;const v=$("#vid");
+    if(v.readyState>=2&&v.videoWidth){const w=480,h=Math.round(v.videoHeight*w/v.videoWidth);cv.width=w;cv.height=h;cx.drawImage(v,0,0,w,h);
+      const code=window.jsQR&&jsQR(cx.getImageData(0,0,w,h).data,w,h,{inversionAttempts:"attemptBoth"});
+      if(code&&code.data){closeScan();beep([880]);buzz(80);unlock(parseCode(code.data));return}}
+    requestAnimationFrame(loop)}
+  $("#scanClose").onclick=closeScan;
+  $("#manGo").onclick=()=>{const v=$("#manual").value.trim();if(v){closeScan();unlock(parseCode(v))}};
+
+  function unlock(sid){
+    sid=String(sid).toUpperCase().trim();
+    if(!connected){toast("Canlı bağlantı yok, birkaç saniye sonra tekrar dene.");return}
+    const s=devices.get(sid);
+    if(!s||s.role!=="scooter"||!online(s)){toast(sid+" çevrimiçi değil. Scooter telefonunda sayfa açık mı?",4500);return}
+    const r=riderOf(sid);if(r&&r.id!==id){toast("Bu scooter şu an başka bir sürüşte.",4000);return}
+    ride={sid,start:Date.now()};track=s.lat!=null?[[s.lat,s.lng]]:[];dist=0;
+    ls.set("ks_ride",JSON.stringify(ride));ls.set("ks_track","[]");ls.set("ks_dist","0");setMe({ride});
+    phase="ride";follow=true;toast("Kilit açıldı · İyi sürüşler!");say("Kilit açıldı");draw(true);
+  }
+  function finish(byPanel){
+    const min=Math.max(1,Math.ceil((Date.now()-ride.start)/60000));
+    receipt={sid:ride.sid,min,km:(dist/1000).toFixed(2),open:price.open,pmin:price.min,total:price.open+min*price.min,byPanel:!!byPanel};
+    publish("rides",Object.assign({rider:name,end:Date.now()},receipt),false);
+    ride=null;track=[];ls.del("ks_ride");ls.del("ks_track");ls.del("ks_dist");setMe({ride:null});photo&&URL.revokeObjectURL(photo);photo=null;phase="receipt";say("Sürüş tamamlandı");draw(true);
+  }
+  cmdHandlers.add(c=>{if(c.type==="lock"&&ride&&c.sid===ride.sid){toast("Scooter yönetim panelinden kilitlendi.",4500);finish(true)}});
+  $("#ph").onchange=e=>{const f=e.target.files[0];e.target.value="";if(f){photo&&URL.revokeObjectURL(photo);photo=URL.createObjectURL(f);draw(true)}};
+
+  function draw(force){
+    const el=$("#sheet");
+    if(phase==="ride"&&ride){
+      const s=devices.get(ride.sid),r=riderOf(ride.sid);
+      if(connected&&r&&r.id!==id){toast("Bu scooteri senden önce başka biri açtı. Sürüş iptal edildi.",5000);ride=null;ls.del("ks_ride");setMe({ride:null});phase="browse";draw(true);return}
+      const sec=(Date.now()-ride.start)/1000,cost=price.open+Math.max(1,Math.ceil(sec/60))*price.min,z=s?zoneOf(s.lat,s.lng):null,on=online(s);
+      if(force||!$("#rT")){
+        el.innerHTML=`<div class="row"><span class="chip c-ok">● Sürüşte · ${esc(ride.sid)}</span><span class="chip" id="rSig"></span></div>
+        <div class="ridehead"><div><div class="note">Süre</div><div class="timer" id="rT"></div></div><div style="text-align:right"><div class="note">Ücret</div><div class="cost" id="rC"></div></div></div>
+        <div class="kv"><div><small>Mesafe</small><b id="rD"></b></div><div><small>Bölge</small><b id="rZ" style="font-size:15px"></b></div><div><small>Batarya</small><b id="rB"></b></div></div>
+        <div id="rA"></div><button class="btn danger" id="end">${IC.lock}Sürüşü bitir</button>`;
+        $("#end").onclick=()=>{phase="park";draw(true)};
+      }
+      $("#rT").textContent=mmss(sec);$("#rC").textContent=tl(cost);$("#rD").textContent=(dist/1000).toFixed(2)+" km";
+      $("#rZ").textContent=z==="ban"?"Yasak":z==="slow"?"Yavaş":"Normal";$("#rB").textContent="%"+(s&&s.bat!=null?s.bat:"?");
+      const sg=$("#rSig");sg.textContent=on?"Scooter canlı":"Sinyal yok";sg.className="chip "+(on?"c-blue":"c-warn");
+      $("#rA").innerHTML=z==="ban"?'<div class="alert bad">Sürüş yasak bölgedesin. Bu alanda scooter durdurulur.</div>':z==="slow"?'<div class="alert">Yavaş bölgedesin. Hız 15 km/s ile sınırlı.</div>':"";
+      return;
+    }
+    if(!force)return;
+    if(phase==="park"){
+      el.innerHTML=`<h2>Park fotoğrafı</h2><div class="photo">${photo?`<img src="${photo}" alt="Park fotoğrafı">`:`<span style="width:40px;height:40px;display:block">${IC.cam}</span>Scooterı ve çevresini gösteren bir fotoğraf çek.`}</div>
+      <button class="btn ghost" id="shot">${IC.cam}${photo?"Yeniden çek":"Fotoğraf çek"}</button><button class="btn" id="fin" ${photo?"":"disabled"}>${IC.lock}Kilitle ve öde</button><button class="btn ghost" id="back">Sürüşe dön</button>`;
+      $("#shot").onclick=()=>$("#ph").click();$("#fin").onclick=()=>finish(false);$("#back").onclick=()=>{phase="ride";draw(true)};return;
+    }
+    if(phase==="receipt"&&receipt){const r=receipt;
+      el.innerHTML=`<div class="check">${IC.check}</div><h2 style="text-align:center">Sürüş tamamlandı</h2>
+      <div class="receipt"><div class="it"><span>Scooter</span><span class="mono">${esc(r.sid)}</span></div><div class="it"><span>Süre</span><span class="mono">${r.min} dk</span></div><div class="it"><span>Mesafe</span><span class="mono">${r.km} km</span></div><div class="it"><span>Açılış ücreti</span><span class="mono">${tl(r.open)}</span></div><div class="it"><span>${r.min} dk × ${tl(r.pmin)}</span><span class="mono">${tl(r.min*r.pmin)}</span></div><div class="it tot"><span>Toplam</span><span class="mono">${tl(r.total)}</span></div></div>
+      <p class="note" style="text-align:center">Test sürümü: kart çekimi yapılmaz, tutar sadece hesaplanır.</p><button class="btn" id="ok">Tamam</button>`;
+      $("#ok").onclick=()=>{phase="browse";receipt=null;draw(true)};return}
+    const list=scooters().map(s=>Object.assign({},s,{d:pos&&s.lat!=null?hav(pos.lat,pos.lng,s.lat,s.lng):null})).sort((a,b)=>(a.d??1e9)-(b.d??1e9));
+    const s=list.find(d=>d.id===sel);
+    if(s){const used=!!riderOf(s.id);
+      el.innerHTML=`<div class="row"><div><div class="mono" style="font:800 22px var(--f-m)">${esc(s.id)}</div><div class="note">${s.d!=null?distTxt(s.d)+" uzakta":"Uzaklık bilinmiyor"}</div></div>${used?'<span class="chip c-warn">Kullanımda</span>':'<span class="chip c-ok">Müsait</span>'}</div>
+      <div class="kv"><div><small>Batarya</small><b style="color:${battCol(s.bat)}">%${esc(s.bat??"?")}</b></div><div><small>Açılış</small><b>${price.open}₺</b></div><div><small>Dakika</small><b>${price.min}₺</b></div></div>
+      <button class="btn" id="qrB" ${used?"disabled":""}>${IC.qr}QR okut ve kilidi aç</button><button class="btn ghost" id="desel">Tüm scooterlar</button>`;
+    }else{
+      el.innerHTML=`<div class="row"><h2>${list.length?list.length+" scooter yakında":"Yakında scooter yok"}</h2>${connPill()}</div>
+      ${list.length?`<div style="display:grid;gap:8px">${list.slice(0,4).map(d=>`<button class="scrow" data-s="${esc(d.id)}"><span class="ico" style="color:var(--accent-2)">${IC.scooter}</span><span><b>${esc(d.id)}</b><small>${d.d!=null?distTxt(d.d)+" uzakta":"konum bekleniyor"}${riderOf(d.id)?" · kullanımda":""}</small></span>${battHtml(d.bat)}</button>`).join("")}</div>`:'<p class="note">Diğer telefonda linki açıp <b>Scooter</b> seçince burada görünür.</p>'}
+      <button class="btn" id="qrB">${IC.qr}QR okut</button>`;
+      el.querySelectorAll("[data-s]").forEach(b=>b.onclick=()=>{sel=b.dataset.s;const d=devices.get(sel);if(d&&d.lat!=null){follow=false;map.flyTo([d.lat,d.lng],17,{duration:.5})}draw(true)});
+    }
+    $("#qrB").onclick=openScan;$("#desel")&&($("#desel").onclick=()=>{sel=null;draw(true)});
+  }
+  let lastSig="",pendingU=QR_U&&!ride?QR_U.toUpperCase():null;const pendingT=Date.now();
+  if(pendingU)toast(pendingU+" bulunuyor…",2500);
+  function update(){
+    if(pendingU&&connected){const d=devices.get(pendingU);if(d&&online(d)){const u=pendingU;pendingU=null;history.replaceState(null,"","#musteri");unlock(u)}else if(Date.now()-pendingT>15000){toast(pendingU+" çevrimiçi değil. Scooter telefonunda uygulama açık mı?",5000);pendingU=null;history.replaceState(null,"","#musteri")}}
+    drawZones(zl);sl.clearLayers();trl.clearLayers();
+    scooters().filter(d=>d.lat!=null).forEach(d=>{const m=L.marker([d.lat,d.lng],{icon:pinIcon(d,d.id===sel||(ride&&ride.sid===d.id))}).addTo(sl);m.on("click",()=>{if(phase==="browse"){sel=d.id;draw(true)}})});
+    if(ride){const s=devices.get(ride.sid);if(s&&s.lat!=null){const last=track[track.length-1];if(!last||last[0]!==s.lat||last[1]!==s.lng){if(last){const st=hav(last[0],last[1],s.lat,s.lng);if(st<250&&(s.acc||50)<80)dist+=st}track.push([s.lat,s.lng]);track=track.slice(-600);ls.set("ks_track",JSON.stringify(track));ls.set("ks_dist",String(dist))}
+        if(follow)map.panTo([s.lat,s.lng],{animate:true})}
+      if(track.length>1){L.polyline(track,{color:"#fff",weight:9,opacity:.9}).addTo(trl);L.polyline(track,{color:"#FF8A00",weight:5}).addTo(trl)}}
+    if(pos){if(!meMk)meMk=L.marker([pos.lat,pos.lng],{icon:meIcon(),zIndexOffset:1000}).addTo(map);else meMk.setLatLng([pos.lat,pos.lng]);if(!centered){map.setView([pos.lat,pos.lng],16);centered=true}}
+    const sig=JSON.stringify(scooters().map(d=>[d.id,!!riderOf(d.id),d.bat]))+price.open+price.min+connected+(pos?Math.round(pos.lat*2000)+","+Math.round(pos.lng*2000):"");
+    if(phase==="browse"&&sig!==lastSig){lastSig=sig;draw(true)}else draw(false);
+  }
+  setInterval(()=>setMe(Object.assign({},pos||{})),2500);
+  draw(true);update();setInterval(update,1000);
+  if(geoErr)toast(geoErr,5000);
+}
+
+/* =========================================================
+   PANEL
+   ========================================================= */
+function panelMode(){
+  const id="P-"+rnd();myState={id,role:"panel",name:ls.get("ks_name")||"Panel"};connect(id);
+  app.innerHTML=`<div class="panel">
+  <div class="row"><div class="brand"><img class="logo" src="${ICON}" alt="">Panel</div><div class="tools">${connPill()}<button class="iconbtn" id="sw" aria-label="Rol değiştir">${IC.menu}</button></div></div>
+  <div class="stats" id="stats"></div>
+  <div class="pgrid">
+    <div style="display:grid;gap:10px;min-width:0">
+      <div class="tools"><button class="btn sm" id="zS" style="background:#E08A00;color:#fff">+ Yavaş bölge</button><button class="btn sm" id="zB" style="background:#E5484D;color:#fff">+ Yasak bölge</button><label class="field" style="display:flex;align-items:center;gap:6px">Yarıçap<input type="number" id="zr" value="120" min="20" max="2000" step="10" style="width:86px;padding:8px">m</label><button class="btn ghost sm" id="fit">Hepsini göster</button></div>
+      <p class="note" id="zH" hidden></p>
+      <div id="mapEl" class="pmap"></div>
+    </div>
+    <div style="display:grid;gap:14px;min-width:0">
+      <div class="card"><h2>Bağlı cihazlar</h2><div class="list" id="devs"></div></div>
+      <div class="card"><h2>Son sürüşler</h2><div class="list" id="rides"></div></div>
+      <div class="card"><h2>Fiyat</h2><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><label class="field">Açılış (₺)<input type="number" id="pO" step="0.5" min="0" value="${price.open}"></label><label class="field">Dakika (₺)<input type="number" id="pM" step="0.5" min="0" value="${price.min}"></label></div><button class="btn" id="pS">Fiyatı kaydet</button></div>
+      <div class="card" id="shareCard"></div>
+    </div>
+  </div></div>`;
+  $("#sw").onclick=switchRole;
+  function shareCard(edit){
+    const url=publicUrl(),c=$("#shareCard");
+    if(!url||edit){
+      c.innerHTML=`<h2>Herkese açık link</h2><p class="note">Test edecek kişilere gidecek linki bir kez buraya yapıştır (GitHub linkin). Uygulama bunu hatırlar.</p><input type="text" id="pubIn" inputmode="url" placeholder="https://kullaniciadin.github.io/kayahan-scooter/" value="${esc(url)}"><button class="btn" id="pubSave">Kaydet</button>`;
+      $("#pubSave").onclick=()=>{let v=$("#pubIn").value.trim();if(!/^https:\/\//.test(v)){toast("Link https:// ile başlamalı");return}ls.set("ks_public",v);shareCard(false)};return}
+    c.innerHTML=`<div class="row"><h2>Linki paylaş</h2>${IN_APP?'<button class="btn ghost sm" id="pubEdit">Değiştir</button>':""}</div><p class="note">Bu linki açan her telefon sisteme bağlanır. TV'de açmak için sonuna <b class="mono">#tv</b> ekle.</p><div class="qrbox"><div id="jq"></div></div><p class="note mono" style="word-break:break-all">${esc(url)}</p><a class="btn" target="_blank" rel="noopener" href="https://wa.me/?text=${encodeURIComponent("Kayahan Scooter testine katıl: "+url+"\nLinki aç, rolünü seç (Scooter veya Müşteri), konum ve kamera iznine İzin ver de.")}">WhatsApp'tan gönder</a>`;
+    new QRCode($("#jq"),{text:url,width:190,height:190});
+    $("#pubEdit")&&($("#pubEdit").onclick=()=>shareCard(true));
+  }
+  shareCard(false);urlHandlers.add(()=>{if(!$("#pubIn"))shareCard(false)});
+  const map=makeMap($("#mapEl")),zl=L.layerGroup().addTo(map),dl=L.layerGroup().addTo(map),trl=L.layerGroup().addTo(map);
+  let mode=null,fitted=false;const trails=new Map();
+  let rides=[];try{rides=JSON.parse(ls.get("ks_rides")||"[]")}catch(e){}
+  rideHandlers.add(r=>{if(rides.some(x=>x.end===r.end&&x.sid===r.sid))return;rides.unshift(r);rides=rides.slice(0,50);ls.set("ks_rides",JSON.stringify(rides));drawLists()});
+  function setMode(m){mode=mode===m?null:m;$("#zS").classList.toggle("on",mode==="slow");$("#zB").classList.toggle("on",mode==="ban");$("#zH").hidden=!mode;$("#zH").textContent="Haritada bölgenin merkezine dokun."}
+  $("#zS").onclick=()=>setMode("slow");$("#zB").onclick=()=>setMode("ban");
+  map.on("click",e=>{if(!mode)return;if(!connected){toast("Canlı bağlantı yok");return}
+    zones=zones.concat([{id:"z"+Date.now(),lat:+e.latlng.lat.toFixed(6),lng:+e.latlng.lng.toFixed(6),r:Math.max(20,Math.min(2000,+$("#zr").value||120)),type:mode}]);
+    publish("zones",zones,true);toast(mode==="ban"?"Yasak bölge eklendi":"Yavaş bölge eklendi");setMode(mode);update()});
+  $("#fit").onclick=()=>fit(true);
+  $("#pS").onclick=()=>{const p={open:Math.max(0,+$("#pO").value||0),min:Math.max(0,+$("#pM").value||0)};price=p;publish("price",p,true);toast("Fiyat kaydedildi")};
+  function fit(force){const pts=[...devices.values()].filter(d=>online(d)&&d.lat!=null).map(d=>[d.lat,d.lng]);if(pts.length&&(force||!fitted)){map.fitBounds(pts,{padding:[60,60],maxZoom:17});fitted=true}}
+  app.addEventListener("click",e=>{const b=e.target.closest("[data-lock]");if(!b)return;publish("cmd",{type:"lock",sid:b.dataset.lock,at:Date.now()},false);toast(b.dataset.lock+" için kilit komutu gönderildi")});
+  function drawLists(){
+    const D=[...devices.values()].filter(d=>d.role!=="panel"&&d.role!=="tv"&&online(d));
+    $("#devs").innerHTML=D.length?D.sort((a,b)=>a.role.localeCompare(b.role)||a.id.localeCompare(b.id)).map(d=>{
+      const r=d.role==="scooter"?riderOf(d.id):null,z=zoneOf(d.lat,d.lng);
+      const chip=d.role==="musteri"?(d.ride?'<span class="chip c-ok">Sürüyor</span>':'<span class="chip c-blue">Müşteri</span>'):r?'<span class="chip c-ok">Sürüşte</span>':'<span class="chip c-warn">Kilitli</span>';
+      const sub=d.role==="scooter"?`%${d.bat??"?"}${d.acc!=null?" · GPS ±"+d.acc+" m":" · konum yok"}${r?" · "+esc(r.name||"")+" · "+mmss((Date.now()-r.ride.start)/1000):""}${z&&r?" · "+(z==="ban"?"YASAK bölgede":"yavaş bölgede"):""}`:`${d.ride?"Sürüyor: "+esc(d.ride.sid):"Bekliyor"}${d.acc!=null?" · GPS ±"+d.acc+" m":""}`;
+      return `<div class="it2"><div><div class="t mono">${esc(d.role==="musteri"?(d.name||d.id):d.id)}</div><div class="s">${sub}</div></div><div class="tools">${chip}${r?`<button class="btn sm danger" data-lock="${esc(d.id)}">Kilitle</button>`:""}</div></div>`}).join(""):'<p class="note">Henüz bağlı telefon yok. Linki bir telefonda açıp rol seç.</p>';
+    $("#rides").innerHTML=rides.length?rides.slice(0,15).map(r=>`<div class="it2"><div><div class="t mono">${esc(r.sid)}</div><div class="s">${esc(r.rider||"")} · ${r.min} dk · ${r.km} km${r.byPanel?" · panel kilitledi":""} · ${new Date(r.end).toLocaleTimeString("tr-TR",{hour:"2-digit",minute:"2-digit"})}</div></div><span class="mono" style="font-weight:800">${tl(r.total)}</span></div>`).join(""):'<p class="note">Panel açıkken biten sürüşler burada listelenir.</p>';
+  }
+  function update(){
+    const S=scooters(),C=customers(),today=new Date().toDateString();
+    const st=[["Çevrimiçi scooter",S.length,"var(--accent)"],["Aktif sürüş",S.filter(s=>riderOf(s.id)).length,"var(--ok)"],["Çevrimiçi müşteri",C.length,"var(--blue)"],["Bugünkü ciro",tl(rides.filter(r=>new Date(r.end).toDateString()===today).reduce((a,r)=>a+r.total,0)),"var(--accent-2)"]];
+    $("#stats").innerHTML=st.map(([a,b,c])=>`<div class="stat" style="--tint:${c}"><small>${a}</small><b>${b}</b></div>`).join("");
+    drawZones(zl,z=>{const box=document.createElement("div");box.innerHTML=`<b>${z.type==="ban"?"Yasak bölge":"Yavaş bölge"}</b><br>${Math.round(z.r)} m yarıçap<br><button style="margin-top:6px">Bölgeyi sil</button>`;box.querySelector("button").onclick=()=>{zones=zones.filter(x=>x.id!==z.id);publish("zones",zones,true);map.closePopup();toast("Bölge silindi");update()};L.popup().setLatLng([z.lat,z.lng]).setContent(box).openOn(map)});
+    dl.clearLayers();trl.clearLayers();
+    S.forEach(s=>{const r=riderOf(s.id);if(r&&s.lat!=null){const t=trails.get(s.id)||[];const l=t[t.length-1];if(!l||l[0]!==s.lat||l[1]!==s.lng)t.push([s.lat,s.lng]);trails.set(s.id,t.slice(-600))}else trails.delete(s.id)});
+    trails.forEach(t=>{if(t.length>1){L.polyline(t,{color:"#fff",weight:8,opacity:.85}).addTo(trl);L.polyline(t,{color:"#14A865",weight:4.5}).addTo(trl)}});
+    S.filter(s=>s.lat!=null).forEach(s=>L.marker([s.lat,s.lng],{icon:pinIcon(s)}).bindTooltip(`${s.id} · %${s.bat??"?"}`).addTo(dl));
+    C.filter(c=>c.lat!=null).forEach(c=>L.marker([c.lat,c.lng],{icon:custIcon()}).bindTooltip("Müşteri · "+esc(c.name||c.id)).addTo(dl));
+    fit(false);drawLists();
+  }
+  handlers.add(()=>{if(document.activeElement!==$("#pO")&&document.activeElement!==$("#pM")){$("#pO").value=price.open;$("#pM").value=price.min}});
+  update();setInterval(update,1500);
+}
+
+/* =========================================================
+   TV — büyük ekran canlı pano (kumanda gerektirmez)
+   ========================================================= */
+function tvMode(){
+  const id="TV-"+rnd();myState={id,role:"tv",name:"TV"};connect(id);
+  const url=publicUrl();
+  app.innerHTML=`<div class="tv">
+  <header><div class="brand"><img src="${ICON}" alt="">Kayahan Scooter <span class="ticker" style="font-size:1.1vw;margin-left:.6vw">CANLI FİLO</span></div><div class="tools">${connPill()}<span class="clock" id="clk"></span><button class="iconbtn" id="sw" aria-label="Rol değiştir" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.15);color:#EEF2F7">${IC.menu}</button></div></header>
+  <div id="mapEl" class="tmap"></div>
+  <aside>
+    <div class="tstats" id="ts"></div>
+    <div class="tbox grow"><h2>Aktif sürüşler</h2><div id="tr"></div></div>
+    <div class="tbox" style="max-height:28%"><h2>Son sürüşler</h2><div id="tl"></div></div>
+    <div class="tbox join" ${url?"":"hidden"}><div class="qrbox"><div id="tq"></div></div><div><h2>Sen de katıl</h2><p style="margin:.3vw 0 0;color:#93A1B4;font-size:.95vw">Telefon kamerasıyla okut, rolünü seç.</p></div></div>
+  </aside></div>`;
+  $("#sw").onclick=switchRole;
+  const qs=Math.round(innerWidth*0.075);if(url)new QRCode($("#tq"),{text:url,width:qs,height:qs});
+  const map=makeMap($("#mapEl"),true),zl=L.layerGroup().addTo(map),dl=L.layerGroup().addTo(map),trl=L.layerGroup().addTo(map);
+  const trails=new Map();let rides=[];let fitAt=0;
+  rideHandlers.add(r=>{if(rides.some(x=>x.end===r.end&&x.sid===r.sid))return;rides.unshift(r);rides=rides.slice(0,12)});
+  const clk=()=>$("#clk").textContent=new Date().toLocaleTimeString("tr-TR",{hour:"2-digit",minute:"2-digit"});clk();setInterval(clk,10000);
+  function update(){
+    const S=scooters(),C=customers(),act=S.filter(s=>riderOf(s.id));
+    $("#ts").innerHTML=[["Scooter",S.length],["Sürüşte",act.length],["Müşteri",C.length],["Ciro",tl(rides.reduce((a,r)=>a+r.total,0)).replace(",00","")]].map(([a,b])=>`<div class="tstat"><small>${a}</small><b>${b}</b></div>`).join("");
+    $("#tr").innerHTML=act.length?act.map(s=>{const r=riderOf(s.id),sec=(Date.now()-r.ride.start)/1000,z=zoneOf(s.lat,s.lng);return `<div class="trow"><div><b>${esc(s.id)}</b><small>${esc(r.name||"Müşteri")} · %${s.bat??"?"}${z?" · "+(z==="ban"?"YASAK BÖLGE":"yavaş bölge"):""}</small></div><div style="text-align:right"><b>${mmss(sec)}</b><small>${tl(price.open+Math.max(1,Math.ceil(sec/60))*price.min)}</small></div></div>`}).join(""):'<p style="color:#93A1B4;margin:0">Şu an aktif sürüş yok.</p>';
+    $("#tl").innerHTML=rides.length?rides.slice(0,4).map(r=>`<div class="trow"><div><b>${esc(r.sid)}</b><small>${esc(r.rider||"")} · ${r.min} dk · ${r.km} km</small></div><b>${tl(r.total)}</b></div>`).join(""):'<p style="color:#93A1B4;margin:0">Henüz biten sürüş yok.</p>';
+    drawZones(zl);dl.clearLayers();trl.clearLayers();
+    S.forEach(s=>{const r=riderOf(s.id);if(r&&s.lat!=null){const t=trails.get(s.id)||[];const l=t[t.length-1];if(!l||l[0]!==s.lat||l[1]!==s.lng)t.push([s.lat,s.lng]);trails.set(s.id,t.slice(-800))}else trails.delete(s.id)});
+    trails.forEach(t=>{if(t.length>1){L.polyline(t,{color:"#FF8A00",weight:10,opacity:.25}).addTo(trl);L.polyline(t,{color:"#FFB000",weight:4}).addTo(trl)}});
+    S.filter(s=>s.lat!=null).forEach(s=>L.marker([s.lat,s.lng],{icon:pinIcon(s)}).addTo(dl));
+    C.filter(c=>c.lat!=null).forEach(c=>L.marker([c.lat,c.lng],{icon:custIcon()}).addTo(dl));
+    const pts=[...S,...C].filter(d=>d.lat!=null).map(d=>[d.lat,d.lng]);
+    if(pts.length&&Date.now()-fitAt>15000){map.flyToBounds(pts,{padding:[80,80],maxZoom:17,duration:1.2});fitAt=Date.now()}
+  }
+  update();setInterval(update,1500);keepAwake();
+}
+
+function start(){
+  if(!window.L||!window.mqtt){app.innerHTML=`<div class="welcome"><div class="brand"><img class="logo" src="${ICON}" alt="">Kayahan Scooter</div><h1>İnternet bağlantısı gerekli</h1><p class="note">Sayfanın parçaları yüklenemedi. Bağlantını kontrol edip sayfayı yenile.</p></div>`;return}
+  if(role==="scooter")scooterMode();else if(role==="musteri")customerMode();else if(role==="panel")panelMode();else if(role==="tv")tvMode();else chooseScreen();
+}
+start();
+</script>
+</body>
+</html>
